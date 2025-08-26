@@ -244,7 +244,7 @@
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading2">
-        <a href="introduction.html">1. Using Markdown</a>
+        <a href="data-management.html">1. Basics of Feature Class Manipulation</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -308,11 +308,11 @@
     <main id="main-content" class="main-content"><div class="container lesson-content">
         
         
-<section id="aio-introduction"><p>Content from <a href="introduction.html">Using Markdown</a></p>
+<section id="aio-data-management"><p>Content from <a href="data-management.html">Basics of Feature Class Manipulation</a></p>
 <hr>
-<p>Last updated on 2025-07-11 |
+<p>Last updated on 2025-08-26 |
 
-        <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/introduction.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/data-management.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
@@ -325,8 +325,10 @@
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>How do you write a lesson using Markdown and
-<a href="https://carpentries.github.io/sandpaper/" class="external-link">sandpaper</a>?</li>
+<li>What are the three basic Vector data geometries?</li>
+<li>How do you create a feature dataset in QGIS?</li>
+<li>How do you decide what datapoints should be included in a
+dataset?</li>
 </ul>
 </div>
 </div>
@@ -336,141 +338,227 @@
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Explain how to use markdown with The Carpentries Workbench</li>
-<li>Demonstrate how to include pieces of code, figures, and nested
-challenge blocks</li>
+<li>Understand the basic components of vector geometry</li>
+<li>Learn to create a data dictionary</li>
+<li>Learn the basics of data collection</li>
+<li>Learn to prepare a project file in QGIS</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
+<section><h2 class="section-heading" id="beginner---characteristics-of-geospatial-data">Beginner - Characteristics of geospatial data<a class="anchor" aria-label="anchor" href="#beginner---characteristics-of-geospatial-data"></a>
+</h2>
+<hr class="half-width"></section><section><h2 class="section-heading" id="intermediate---design-and-create-a-new-feature-dataset-in-qgis">Intermediate - Design and create a new feature dataset in QGIS<a class="anchor" aria-label="anchor" href="#intermediate---design-and-create-a-new-feature-dataset-in-qgis"></a>
 </h2>
 <hr class="half-width">
-<p>This is a lesson created via The Carpentries Workbench. It is written
-in <a href="https://pandoc.org/MANUAL.html" class="external-link">Pandoc-flavored Markdown</a>
-for static files and <a href="https://rmarkdown.rstudio.com/" class="external-link">R
-Markdown</a> for dynamic files that can render code into output. Please
-refer to the <a href="https://carpentries.github.io/sandpaper-docs/" class="external-link">Introduction to The
-Carpentries Workbench</a> for full documentation.</p>
-<p>What you need to know is that there are three sections required for a
-valid Carpentries lesson:</p>
+<p>In this section, we outline the steps for creating a basic data
+collection workflow that can be accessed and used by students,
+collaborators, or public participants to collect field data on a desktop
+GIS or on a mobile device. The following steps assume that you have
+downloaded and installed a GIS software package (e.g., QGIS) and you
+have a new project open.</p>
+<div class="section level3">
+<h3 id="design-a-layer-to-contain-your-incoming-data">Design a layer to contain your incoming data<a class="anchor" aria-label="anchor" href="#design-a-layer-to-contain-your-incoming-data"></a>
+</h3>
+<p>This is the most fundamental part of geodatabase design, and the most
+time consuming. This stage is where you will conceptualize what kind of
+vector data you need to collect to answer your research question, and
+how that translates into the spatial geometries of a GIS (e.g., points,
+lines, polygons, or all three).</p>
+<ul>
+<li><p>First, consider what objects or phenomena field collectors will
+be recording to the map, that you will want in your database to later
+query, analyze and display for your project. Make a list of each kind of
+object or phenomenon you are interested in (e.g., variables in your
+study), since each may require a different data layer.</p></li>
+<li><p>Think about what shape/geometry those objects and data points
+will be most appropriately represented as at the scale you anticipate
+analyzing and displaying them. (TIP: a building might best be
+represented as a point on a small scale map, but as a polygon on a
+larger scale map).</p></li>
+<li><p>Next, brainstorm what kind of information (or, attributes) is
+important to collect about each feature in your layer. It can be helpful
+to use graph paper, spreadsheet software, whiteboard, etc., to create a
+table listing the kinds of information you want to collect, correlated
+with variables, measurements, or units, that can describe that
+information collectable as data. These will be driven by the variable
+your research is studying, so it is worth taking the time to map out
+these variables in a table format before creating your GIS layers. As an
+example, if you studying declining butterfly populations, the types of
+information that might inform your study could include information
+organized in the following table:</p></li>
+</ul>
+<table class="table">
+<colgroup>
+<col width="48%">
+<col width="51%">
+</colgroup>
+<thead><tr class="header">
+<th>Type of useful information</th>
+<th>Example data points (attributes)</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>Traits about the butterfly</td>
+<td>species, stage of development, condition</td>
+</tr>
+<tr class="even">
+<td>What time of day was it spotted?</td>
+<td>date and time</td>
+</tr>
+<tr class="odd">
+<td>What was the weather like?</td>
+<td>temperature, cloud cover, precipitation</td>
+</tr>
+<tr class="even">
+<td>Was the butterfly spotted on vegetation?</td>
+<td>plant species</td>
+</tr>
+<tr class="odd">
+<td>What was the location?</td>
+<td>park name, address, coordinates</td>
+</tr>
+<tr class="even">
+<td>Should collectors provide a general description?</td>
+<td>description, comments field</td>
+</tr>
+<tr class="odd">
+<td>Will a photograph be helpful?</td>
+<td>field photo from phone</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>Once you have brainstormed the categories of traits or attributes
+to collect about a feature or place, it’s time to translate these
+categories of data into spatial data “fields” that will form the
+attribute table for your GIS feature layer. This process can be referred
+to as building a “data dictionary”. Things to consider here: will each
+data point need a unique name or identifier code; will field collectors
+need to add measurements (if so, how precise); what kinds of
+observations will be entered in the collection form (numerical, textual,
+etc.); would pull-down menus be helpful to predefine selections
+available to collectors, should photos or attachments be added during
+data collection?</p>
+<ul>
+<li>Some data properties can be changed later as your project evolves,
+but some are more difficult to change once they are established. So here
+again, visualizing your data dictionary in a spreadsheet is helpful, as
+in the example below:</li>
+</ul>
+</li>
+</ul>
+<table class="table">
+<caption>Data Dictionary Example Worksheet (point data)</caption>
+<colgroup>
+<col width="19%">
+<col width="10%">
+<col width="9%">
+<col width="12%">
+<col width="18%">
+<col width="15%">
+<col width="15%">
+</colgroup>
+<thead><tr class="header">
+<th>Attribute Description</th>
+<th>Field Name</th>
+<th>Data type</th>
+<th>Length (text)</th>
+<th>Data entry method</th>
+<th>Allow null values</th>
+<th>Allow attachments</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>Butterfly species</td>
+<td>Species</td>
+<td>String</td>
+<td>40</td>
+<td>pull-down menu</td>
+<td>no</td>
+<td>yes</td>
+</tr>
+<tr class="even">
+<td>Time of day</td>
+<td>Date_time</td>
+<td>Date</td>
+<td></td>
+<td>Choose from calendar</td>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr class="odd">
+<td>Location of sighting</td>
+<td>Location</td>
+<td>String</td>
+<td>40</td>
+<td>Enter text</td>
+<td>yes</td>
+<td>no</td>
+</tr>
+<tr class="even">
+<td>Vegetation host</td>
+<td>Vegetation</td>
+<td>string</td>
+<td>20</td>
+<td>Enter text</td>
+<td>yes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section level3">
+<h3 id="prepare-a-project-file-and-editable-data-layers-in-qgis">Prepare a project file and editable data layers in QGIS<a class="anchor" aria-label="anchor" href="#prepare-a-project-file-and-editable-data-layers-in-qgis"></a>
+</h3>
+<ul>
+<li>Make sure you have downloaded and installed the <a href="https://www.qgis.org/download/" class="external-link">latest version of QGIS</a>
+</li>
+<li>Launch QGIS and create a <strong>new Project</strong> using the
+blank page icon on the top right of the screen. Use the <strong>Save
+as…</strong> command in the Project tab to save your new project in a
+convenient location.</li>
+<li>To create a new feature layer, from the <strong>Layer tab</strong>,
+select <strong>Create layer</strong>, then select <strong>New Shapefile
+Layer</strong>. We can now configure the new layer properties:
 <ol style="list-style-type: decimal">
-<li>
-<code>questions</code> are displayed at the beginning of the episode
-to prime the learner for the content.</li>
-<li>
-<code>objectives</code> are the learning objectives for an episode
-displayed with the questions.</li>
-<li>
-<code>keypoints</code> are displayed at the end of the episode to
-reinforce the objectives.</li>
+<li>In the <strong>New Shapefile Layer</strong> window, set the
+<strong>File name</strong> of the new shapefile in the file path to
+“Butterflies.shp”</li>
+<li>For Geometry, select <strong>Point</strong>.</li>
+<li>Use the default coordinate system, e.g., WGS84.</li>
+<li>In the <strong>New Field</strong> section, we will create attribute
+fields based on the spreadsheet you made earlier in the exercise.</li>
 </ol>
-<div id="accordionInstructor1" class="accordion instructor-note accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
-  <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
-</button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
-<div class="accordion-body">
-<p>Inline instructor notes can help inform instructors of timing
-challenges associated with the lessons. They appear in the “Instructor
-View”</p>
-</div>
-</div>
-</div>
-</div>
-<div id="challenge-1-can-you-do-it" class="callout challenge">
+</li>
+</ul>
+<div id="checklist1" class="callout checklist">
 <div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
+<i class="callout-icon" data-feather="check-square"></i>
 </div>
-<span class="callout-header">Challenge</span>
-<div id="challenge-1-can-you-do-it" class="callout-inner">
-<h3 class="callout-title">Challenge 1: Can you do it?</h3>
-<div class="callout-content">
-<p>What is the output of this command?</p>
-<div class="codewrapper sourceCode" id="cb1">
-<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">paste</span><span class="op">(</span><span class="st">"This"</span>, <span class="st">"new"</span>, <span class="st">"lesson"</span>, <span class="st">"looks"</span>, <span class="st">"good"</span><span class="op">)</span></span></code></pre>
-</div>
-</div>
-</div>
-</div>
-<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
-  <h4 class="accordion-header" id="headingSolution1"> Output </h4>
-</button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
-<div class="accordion-body">
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output" tabindex="0"><code>[1] "This new lesson looks good"</code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="challenge-2-how-do-you-nest-solutions-within-challenge-blocks" class="callout challenge">
-<div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
-</div>
-<span class="callout-header">Challenge</span>
-<div id="challenge-2-how-do-you-nest-solutions-within-challenge-blocks" class="callout-inner">
-<h3 class="callout-title">Challenge 2: how do you nest solutions within
-challenge blocks?</h3>
-<div class="callout-content">
-
-</div>
-</div>
-</div>
-<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
-  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
-</button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
-<div class="accordion-body">
-<p>You can add a line with at least three colons and a
-<code>solution</code> tag.</p>
-</div>
-</div>
-</div>
-</div>
-</section><section><h2 class="section-heading" id="figures">Figures<a class="anchor" aria-label="anchor" href="#figures"></a>
-</h2>
-<hr class="half-width">
-<p>You can use standard markdown for static figures with the following
-syntax:</p>
-<p><code>![optional caption that appears below the figure](figure url){alt='alt text for accessibility purposes'}</code></p>
-<figure><img src="https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg" alt="Blue Carpentries hex person logo with no text." class="figure mx-auto d-block"><div class="figcaption">You belong in The Carpentries!</div>
-</figure><div id="callout1" class="callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
-</div>
-<span class="callout-header">Callout</span>
+<span class="callout-header">Checklist</span>
 <div class="callout-inner">
 <div class="callout-content">
-<p>Callout sections can highlight information.</p>
-<p>They are sometimes used to emphasise particularly important points
-but are also used in some lessons to present “asides”: content that is
-not central to the narrative of the lesson, e.g. by providing the answer
-to a commonly-asked question.</p>
+<ul>
+<li>Configure the data collection form (customize the data entry
+options, online/offline use, default entries, etc.)</li>
+<li>Your new feature layer is now ready to receive new point data and
+added to a new map for visualization.</li>
+<li>Repeat the steps above to create separate feature layers for the
+line features (e.g., trails or rivers) or polygon features (e.g.,
+buildings, parks, or ponds).</li>
+</ul>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="math">Math<a class="anchor" aria-label="anchor" href="#math"></a>
+</div>
+</section><section><h2 class="section-heading" id="advanced---repeat-the-above-steps-creating-an-original-data-dictionary-based-on-your-own-research-or-teaching-interests-">Advanced - Repeat the above steps, creating an original data
+dictionary based on your own research or teaching interests.<a class="anchor" aria-label="anchor" href="#advanced---repeat-the-above-steps-creating-an-original-data-dictionary-based-on-your-own-research-or-teaching-interests-"></a>
 </h2>
 <hr class="half-width">
-<p>One of our episodes contains <span class="math inline">\(\LaTeX\)</span> equations when describing how to
-create dynamic reports with {knitr}, so we now use mathjax to describe
-this:</p>
-<p><code>$\alpha = \dfrac{1}{(1 - \beta)^2}$</code> becomes: <span class="math inline">\(\alpha = \dfrac{1}{(1 - \beta)^2}\)</span></p>
-<p>Cool, right?</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -478,16 +566,7 @@ this:</p>
 <span class="callout-header">Key Points</span>
 <div class="callout-inner">
 <div class="callout-content">
-<ul>
-<li>Use <code>.md</code> files for episodes when you want static
-content</li>
-<li>Use <code>.Rmd</code> files for episodes when you need to generate
-output</li>
-<li>Run <code>sandpaper::check_lesson()</code> to identify any issues
-with your lesson</li>
-<li>Run <code>sandpaper::build_lesson()</code> to preview your lesson
-locally</li>
-</ul>
+<p>placeholder</p>
 </div>
 </div>
 </div>
@@ -542,7 +621,7 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://carpentries.github.io/workbench-template-md/instructor/aio.html",
   "identifier": "https://carpentries.github.io/workbench-template-md/instructor/aio.html",
-  "dateCreated": "2025-08-09",
+  "dateCreated": "2025-08-26",
   "dateModified": "2025-08-26",
   "datePublished": "2025-08-26"
 }
