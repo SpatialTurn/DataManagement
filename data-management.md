@@ -21,6 +21,37 @@ exercises: 2
 
 ## Beginner - Characteristics of geospatial data
 
+When working with spatial data, you will come across two main spatial data formats: vector and raster. It is important to understand these components as we complete exercises and build geospatial concepts upon these components. 
+
+### Vector Data Characteristics
+
+Vector data is a coordinate based system that symbolizes features as three main geometries:
+
+- point
+
+- line
+
+- polygon
+
+![Points, Lines, and Polygons](fig\points_lines_polygons.jpg){alt="A comparison of the three main vector geometries: point, line, and polygon"}
+
+Points can be imagined as **x** and **y** points on a graph that represent longitude and latitude respectively. 
+
+Points often represent locations on a map that are too small to be displayed as polygons. 
+
+::::::::::::::::::::::::: callout
+
+Some examples of locations that may be represented as points include:
+
+- Cell towers
+
+- Weather stations
+
+- Cities on a large scale map
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
 
 ## Intermediate - Design and create a new feature dataset in QGIS
 
