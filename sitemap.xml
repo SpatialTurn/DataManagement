@@ -16,6 +16,9 @@
     <loc>https://carpentries.github.io/workbench-template-md/aio.html</loc>
   </url>
   <url>
+    <loc>https://carpentries.github.io/workbench-template-md/citation.html</loc>
+  </url>
+  <url>
     <loc>https://carpentries.github.io/workbench-template-md/data-management.html</loc>
   </url>
   <url>
@@ -38,6 +41,9 @@
   </url>
   <url>
     <loc>https://carpentries.github.io/workbench-template-md/instructor/aio.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries.github.io/workbench-template-md/instructor/citation.html</loc>
   </url>
   <url>
     <loc>https://carpentries.github.io/workbench-template-md/instructor/data-management.html</loc>
