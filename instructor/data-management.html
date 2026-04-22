@@ -281,7 +281,7 @@ dictionary based on your own research or teaching interests.</a></li>
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Basics of Feature Class Manipulation</h1>
-        <p>Last updated on 2025-11-07 |
+        <p>Last updated on 2026-04-22 |
 
         <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/data-management.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -388,24 +388,25 @@ with variables, measurements, or units, that can describe that
 information collectable as data. These will be driven by the variable
 your research is studying, so it is worth taking the time to map out
 these variables in a table format before creating your GIS layers. As an
-example, if you studying declining butterfly populations, the types of
-information that might inform your study could include information
-organized in the following table:</p></li>
+example, if you are studying grocery stores to determine food
+deserts/food access, the types of information that might inform your
+study could include information organized in the following
+table:</p></li>
 </ul><table class="table"><colgroup><col width="48%"><col width="51%"></colgroup><thead><tr class="header"><th>Type of useful information</th>
 <th>Example data points (attributes)</th>
-</tr></thead><tbody><tr class="odd"><td>Traits about the butterfly</td>
-<td>species, stage of development, condition</td>
-</tr><tr class="even"><td>What time of day was it spotted?</td>
-<td>date and time</td>
-</tr><tr class="odd"><td>What was the weather like?</td>
-<td>temperature, cloud cover, precipitation</td>
-</tr><tr class="even"><td>Was the butterfly spotted on vegetation?</td>
-<td>plant species</td>
-</tr><tr class="odd"><td>What was the location?</td>
-<td>park name, address, coordinates</td>
-</tr><tr class="even"><td>Should collectors provide a general description?</td>
-<td>description, comments field</td>
-</tr><tr class="odd"><td>Will a photograph be helpful?</td>
+</tr></thead><tbody><tr class="odd"><td>Traits about the grocery store</td>
+<td>name, store, address</td>
+</tr><tr class="even"><td>What is the location?</td>
+<td>address, city, ZIP, coordinates</td>
+</tr><tr class="odd"><td>What benefits are accepted at the grocery store?</td>
+<td>snap benefits, wic benefits</td>
+</tr><tr class="even"><td>What food is available at the store?</td>
+<td>produce available, meat available</td>
+</tr><tr class="odd"><td>When was the data observed/recorded?</td>
+<td>hours recorded, day recorded</td>
+</tr><tr class="even"><td>Is there additonal relevant information?</td>
+<td>comments field, notes</td>
+</tr><tr class="odd"><td>A reference photograph</td>
 <td>field photo from phone</td>
 </tr></tbody></table><ul><li>
 <p>Once you have brainstormed the categories of traits or attributes
@@ -424,41 +425,69 @@ but some are more difficult to change once they are established. So here
 again, visualizing your data dictionary in a spreadsheet is helpful, as
 in the example below:</li>
 </ul></li>
-</ul><table class="table"><caption>Data Dictionary Example Worksheet (point data)</caption>
-<colgroup><col width="19%"><col width="10%"><col width="9%"><col width="12%"><col width="18%"><col width="15%"><col width="15%"></colgroup><thead><tr class="header"><th>Attribute Description</th>
+</ul><table style="width:100%;" class="table"><caption>Data Dictionary Example Worksheet (point data)</caption>
+<colgroup><col width="18%"><col width="14%"><col width="8%"><col width="11%"><col width="17%"><col width="14%"><col width="15%"></colgroup><thead><tr class="header"><th>Attribute Description</th>
 <th>Field Name</th>
 <th>Data type</th>
 <th>Length (text)</th>
 <th>Data entry method</th>
 <th>Allow null values</th>
 <th>Allow attachments</th>
-</tr></thead><tbody><tr class="odd"><td>Butterfly species</td>
-<td>Species</td>
-<td>String</td>
+</tr></thead><tbody><tr class="odd"><td>Name of Store</td>
+<td>store_name</td>
+<td>Text</td>
 <td>40</td>
-<td>pull-down menu</td>
+<td>Enter Text</td>
 <td>no</td>
 <td>yes</td>
-</tr><tr class="even"><td>Time of day</td>
-<td>Date_time</td>
-<td>Date</td>
+</tr><tr class="even"><td>Type of Store</td>
+<td>store_type</td>
+<td>Dropdown</td>
 <td></td>
-<td>Choose from calendar</td>
+<td>Dropdown Menu</td>
 <td>no</td>
 <td>no</td>
-</tr><tr class="odd"><td>Location of sighting</td>
-<td>Location</td>
-<td>String</td>
+</tr><tr class="odd"><td>Street Address</td>
+<td>address</td>
+<td>Text</td>
 <td>40</td>
 <td>Enter text</td>
 <td>yes</td>
 <td>no</td>
-</tr><tr class="even"><td>Vegetation host</td>
-<td>Vegetation</td>
-<td>string</td>
-<td>20</td>
-<td>Enter text</td>
-<td>yes</td>
+</tr><tr class="even"><td>City of Store</td>
+<td>city</td>
+<td>Dropdown</td>
+<td></td>
+<td>Dropdown Menu</td>
+<td>no</td>
+<td>no</td>
+</tr><tr class="odd"><td>ZIP of Store</td>
+<td>zip</td>
+<td>Dropdown</td>
+<td></td>
+<td>Dropdown Menu</td>
+<td>no</td>
+<td>no</td>
+</tr><tr class="even"><td>SNAP Accepted</td>
+<td>snap_accepted</td>
+<td>Dropdown</td>
+<td></td>
+<td>Dropdown Menu</td>
+<td>no</td>
+<td></td>
+</tr><tr class="odd"><td>WIC Accepted</td>
+<td>wic_accepted</td>
+<td>Dropdown</td>
+<td></td>
+<td>Dropdown Menu</td>
+<td>no</td>
+<td></td>
+</tr><tr class="even"><td>Is Produce Available?</td>
+<td>produce_available</td>
+<td>Dropdown</td>
+<td></td>
+<td>Dropdown Menu</td>
+<td>no</td>
 <td></td>
 </tr></tbody></table></div>
 <div class="section level3">
@@ -574,9 +603,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://carpentries.github.io/workbench-template-md/instructor/data-management.html",
   "identifier": "https://carpentries.github.io/workbench-template-md/instructor/data-management.html",
-  "dateCreated": "2025-11-07",
-  "dateModified": "2025-11-07",
-  "datePublished": "2026-04-21"
+  "dateCreated": "2026-04-22",
+  "dateModified": "2026-04-22",
+  "datePublished": "2026-04-22"
 }
 
   </script><script>
