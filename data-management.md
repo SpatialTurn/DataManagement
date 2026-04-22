@@ -83,16 +83,19 @@ This is the most fundamental part of geodatabase design, and the most time consu
   
 Table: Data Dictionary Example Worksheet (point data)
 
-| Attribute Description | Field Name       | Data type | Length (text) | Data entry method    | Allow null values| Allow attachments |
-|-----------------------|------------------|-----------|---------------|----------------------|------------------|-------------------|
-| Name of Store         | store_name       | Text      | 40            | Enter Text           | no               | yes               |
-| Type of Store         | store_type       | Dropdown  |               | Dropdown Menu        | no               | no                |
-| Street Address        | address          | Text      | 40            | Enter text           | yes              | no                |
-| City of Store         | city             | Dropdown  |               | Dropdown Menu        | no               | no                |
-| ZIP of Store          | zip              | Dropdown  |               | Dropdown Menu        | no               | no                |
-| SNAP Accepted         | snap_accepted    | Dropdown  |               | Dropdown Menu        | no               |                   |
-| WIC Accepted          | wic_accepted     | Dropdown  |               | Dropdown Menu        | no               |                   |
-| Is Produce Available? | produce_available| Dropdown  |               | Dropdown Menu        | no               |                   |
+| Attribute Description | Field Name       | Data type  | Length (text) | Data entry method    | Allow null values| Allow attachments |
+|-----------------------|------------------|------------|---------------|----------------------|------------------|-------------------|
+| Name of Store         | store_name       | Text       | 40            | Enter Text           | no               | yes               |
+| Type of Store         | store_type       | Dropdown   |               | Dropdown Menu        | no               | no                |
+| Street Address        | address          | Text       | 40            | Enter text           | yes              | no                |
+| City of Store         | city             | Dropdown   |               | Dropdown Menu        | no               | no                |
+| ZIP of Store          | zip              | Dropdown   |               | Dropdown Menu        | no               | no                |
+| SNAP Accepted         | snap_accepted    | Dropdown   |               | Dropdown Menu        | no               |                   |
+| WIC Accepted          | wic_accepted     | Dropdown   |               | Dropdown Menu        | no               |                   |
+| Is Produce Available? | produce_available| Dropdown   |               | Dropdown Menu        | no               |                   |
+| Hours Observed        | hours_observed   | Date       |               | Date                 | yes              |                   |
+| Additional Comments   | comments         | Text       | 180           | Enter Text           | yes              |                   |
+| Storefront Photograph | photo_1          | Attachment |               | Attachment/Photograph| yes              | yes               |
 
 ### Prepare a project file and editable data layers in QGIS
 
