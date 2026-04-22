@@ -65,17 +65,17 @@ This is the most fundamental part of geodatabase design, and the most time consu
 
 - Think about what shape/geometry those objects and data points will be most appropriately represented as at the scale you anticipate analyzing and displaying them. (TIP: a building might best be represented as a point on a small scale map, but as a polygon on a larger scale map).
 
-- Next, brainstorm what kind of information (or, attributes) is important to collect about each feature in your layer. It can be helpful to use graph paper, spreadsheet software, whiteboard, etc., to create a table listing the kinds of information you want to collect, correlated with variables, measurements, or units, that can describe that information collectable as data. These will be driven by the variable your research is studying, so it is worth taking the time to map out these variables in a table format before creating your GIS layers. As an example, if you studying declining butterfly populations, the types of information that might inform your study could include information organized in the following table:
+- Next, brainstorm what kind of information (or, attributes) is important to collect about each feature in your layer. It can be helpful to use graph paper, spreadsheet software, whiteboard, etc., to create a table listing the kinds of information you want to collect, correlated with variables, measurements, or units, that can describe that information collectable as data. These will be driven by the variable your research is studying, so it is worth taking the time to map out these variables in a table format before creating your GIS layers. As an example, if you are studying grocery stores to determine food deserts/food access, the types of information that might inform your study could include information organized in the following table:
 
 | Type of useful information                          | Example data points (attributes)                      |
 |-----------------------------------------------------|--------------------------------------------------------|
-| Traits about the butterfly                          | species, stage of development, condition              |
-| What time of day was it spotted?                    | date and time                                         |
-| What was the weather like?                          | temperature, cloud cover, precipitation               |
-| Was the butterfly spotted on vegetation?            | plant species                                         |
-| What was the location?                              | park name, address, coordinates                       |
-| Should collectors provide a general description?    | description, comments field                           |
-| Will a photograph be helpful?                       | field photo from phone                                |
+| Traits about the grocery store                      | name, store, address                                  |
+| What is the location?                               | address, city, ZIP, coordinates                       |
+| What benefits are accepted at the grocery store?    | snap benefits, wic benefits                           |
+| What food is available at the store?                | produce available, meat available                     |
+| When was the data observed/recorded?                | hours recorded, day recorded                          |
+| Is there additonal relevant information?            | comments field, notes                                 |
+| A reference photograph                              | field photo from phone                                |
                                 
 - Once you have brainstormed the categories of traits or attributes to collect about a feature or place, it’s time to translate these categories of data into spatial data “fields” that will form the attribute table for your GIS feature layer. This process can be referred to as building a “data dictionary”. Things to consider here: will each data point need a unique name or identifier code; will field collectors need to add measurements (if so, how precise); what kinds of observations will be entered in the collection form (numerical, textual, etc.); would pull-down menus be helpful to predefine selections available to collectors, should photos or attachments be added during data collection?
 
@@ -83,12 +83,16 @@ This is the most fundamental part of geodatabase design, and the most time consu
   
 Table: Data Dictionary Example Worksheet (point data)
 
-| Attribute Description | Field Name | Data type | Length (text) | Data entry method    | Allow null values| Allow attachments |
-|-----------------------|------------|-----------|---------------|----------------------|------------------|-------------------|
-| Butterfly species     | Species    | String    | 40            | pull-down menu       | no               | yes               |
-| Time of day           | Date_time  | Date      |               | Choose from calendar | no               | no                |
-| Location of sighting  | Location   | String    | 40            | Enter text           | yes              | no                |
-| Vegetation host       | Vegetation | string    | 20            | Enter text           | yes              |                   |
+| Attribute Description | Field Name       | Data type | Length (text) | Data entry method    | Allow null values| Allow attachments |
+|-----------------------|------------------|-----------|---------------|----------------------|------------------|-------------------|
+| Name of Store         | store_name       | Text      | 40            | Enter Text           | no               | yes               |
+| Type of Store         | store_type       | Dropdown  |               | Dropdown Menu        | no               | no                |
+| Street Address        | address          | Text      | 40            | Enter text           | yes              | no                |
+| City of Store         | city             | Dropdown  |               | Dropdown Menu        | no               | no                |
+| ZIP of Store          | zip              | Dropdown  |               | Dropdown Menu        | no               | no                |
+| SNAP Accepted         | snap_accepted    | Dropdown  |               | Dropdown Menu        | no               |                   |
+| WIC Accepted          | wic_accepted     | Dropdown  |               | Dropdown Menu        | no               |                   |
+| Is Produce Available? | produce_available| Dropdown  |               | Dropdown Menu        | no               |                   |
 
 ### Prepare a project file and editable data layers in QGIS
 
