@@ -2,15 +2,15 @@
 title: Setup
 ---
 
-## Data Sets
+This module is **theory only**: there is nothing to install and no data to download. You need only a web
+browser to read the episodes.
 
-Each lesson will provide instructions on where to access and download the relevant datasets.
-Software Setup
+Some episodes refer to **QGIS**, a free and open-source GIS, to show where a setting or tool can be found. If
+you would like to follow along, you can install it from <https://qgis.org> (choose the **Long Term Release**).
+The other modules in this curriculum (Data Collection, Data Analysis and Data Visualization) include hands-on QGIS
+and Python exercises.
 
-::::::::::::::::::::::::::::::::::::::: discussion
+To practice the challenges, it helps to have:
 
-## Details
-
-We will be utilizing Jupyter notebooks for most of the hands-on activities. A public JupyterHub server has been setup for these lessons, where you can login with your institutional credentials. Some of the lessons will require the use of a desktop GIS tool such as QGIS. You can download the version of QGIS for your operating system [here](https://www.qgis.org/download/).
-
-:::::::::::::::::::::::::::::::::::::::::::::::::::
+- a spreadsheet program, for drafting data dictionaries
+- a project of your own (or an imagined one) to plan as you go

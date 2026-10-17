@@ -2,20 +2,35 @@
 site: sandpaper::sandpaper_site
 ---
 
-One of the primary challenges with the utilization of digital datasets in the social sciences is a lack of data literacy skills in collecting data. This includes both data collection from existing data repositories and field-based data collections such as observation data, interviews, and surveys. This module will provide learning materials on both sides to prepare the researchers with data collection skills at beginner, intermediate, and expert levels.
+Every geospatial project depends on data that is organized, documented, stored safely and checked for
+errors. This module covers the principles of **managing geospatial data during a research project**: how
+spatial data is structured, which formats and coordinate systems to use, how to design a dataset before
+collecting it, how to organize, version and back up files, and how to judge data quality.
 
-:::::::::::::::::::::::::::::::::::::::::: prereq
-## Getting Started
+The module is **conceptual**: it has no programming or software exercises, though it refers to QGIS where that
+helps. Each episode includes examples and challenges with solutions.
 
-These modules are intended to be hands-on through the use of Jupyter notebooks. No prior experience is assumed in order to use these materials.
+| Episode | What you will learn |
+|---|---|
+| Introduction to Data Management | The research data lifecycle, why geospatial data needs extra care, and data management plans |
+| Geospatial Data Models | Vector and raster data, topology, resolution, and choosing a representation |
+| Geospatial File Formats | Shapefile, GeoPackage, GeoJSON, GeoTIFF and others, and which to use when |
+| Coordinate Reference Systems | Datums, geographic and projected systems, EPSG codes, and defining versus reprojecting |
+| Designing Your Data | Data dictionaries, field types, domains, unique IDs and relationships |
+| Organizing, Versioning and Backing Up | Folder structures, file names, portable projects, version control and the 3-2-1 rule |
+| Data Quality | Elements of spatial data quality, geometry errors, and quality checks |
+
+::::::::::::::::::::::::::::::::::::::::::: prereq
+
+## Prerequisites
+
+- No prior GIS or programming experience is needed
+- Familiarity with spreadsheets and with files and folders on a computer
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-::::::::::::::::::::::::::::::::::::: objectives
+The companion **Data Curation** module covers what happens so data can be reused after a project ends:
+metadata, documentation, preservation, sharing and ethics.
 
-    learn how to access different common repositories of existing tabular and imagery datasets relevant to the social science using desktop and API interfaces
-    learn about common methods and software options for capturing original data in the field
-    reflect on the steps for designing a data collection workflow using existing or original geospatial data
-    build a basic GIS project file and data collection system and QGIS geopackage based on an example use case
-
-::::::::::::::::::::::::::::::::::::::::::::::::
+This module is part of [Enabling the Geospatial Turn in the Social Sciences](https://spatialturn.github.io/),
+a set of training modules developed at Purdue University with support from the National Science Foundation.

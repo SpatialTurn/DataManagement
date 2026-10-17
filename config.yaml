@@ -15,32 +15,32 @@
 carpentry: 'incubator'
 
 # Alt-text description of the lesson.
-carpentry_description: 'Lesson Description'
+carpentry_description: 'Managing Geospatial Data'
 
 # Overall title for pages.
-title: 'Lesson Title' # FIXME
+title: 'Managing Geospatial Data'
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
-created: ~ # FIXME
+created: '2025-08-09'
 
 # Comma-separated list of keywords for the lesson
-keywords: 'software, data, lesson, The Carpentries' # FIXME
+keywords: 'data management, data management plan, geospatial data models, file formats, coordinate reference systems, data dictionary, data quality, GIS, social science'
 
 # Life cycle stage of the lesson
 # possible values: pre-alpha, alpha, beta, stable
-life_cycle: 'pre-alpha' # FIXME
+life_cycle: 'alpha'
 
 # License of the lesson
 license: 'CC-BY 4.0'
 
 # Link to the source repository for this lesson
-source: 'https://github.com/carpentries/workbench-template-md' # FIXME
+source: 'https://github.com/SpatialTurn/DataManagement'
 
 # Default branch of your lesson
 branch: 'main'
 
 # Who to contact if there are any issues
-contact: 'team@carpentries.org' # FIXME
+contact: 'ilindsay@purdue.edu'
 
 # Navigation ------------------------------------------------
 #
@@ -65,17 +65,27 @@ contact: 'team@carpentries.org' # FIXME
 # - another-learner.md
 
 # Order of episodes in your lesson
-episodes:
-- data-management.md
+episodes: 
+- introduction.md
+- data-models.md
+- file-formats.md
+- crs.md
+- designing-data.md
+- organizing.md
+- quality.md
 
 # Information for Learners
-learners:
+learners: 
+- setup.md
+- reference.md
 
 # Information for Instructors
-instructors:
+instructors: 
+- instructor-notes.md
 
 # Learner Profiles
-profiles:
+profiles: 
+- learner-profiles.md
 
 # Customisation ---------------------------------------------
 #
