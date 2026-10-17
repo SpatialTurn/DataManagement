@@ -1,11 +1,5 @@
-# This template CITATION.cff file was generated with cffinit.
-# Visit https://bit.ly/cffinit to replace its contents
-# with information about your lesson.
-# Remember to update this file periodically, 
-# ensuring that the author list and other fields remain accurate.
-
 cff-version: 1.2.0
-title: FIXME
+title: "Managing Geospatial Data"
 message: >-
   Please cite this lesson using the information in this file
   when you refer to it in publications, and/or if you
@@ -13,10 +7,37 @@ message: >-
   training material.
 type: dataset
 authors:
-  - given-names: FIXME
-    family-names: FIXME
+  - given-names: Ian
+    family-names: Lindsay
+    affiliation: "Purdue University"
+  - given-names: Nicole
+    family-names: Kong
+    affiliation: "Purdue University"
+  - given-names: Innocensia
+    family-names: Owuor
+    affiliation: "Purdue University"
+  - given-names: Max
+    family-names: Gosch
+    affiliation: "Department of Anthropology, Purdue University"
+  - given-names: Aniket Dev
+    family-names: Roy
+    affiliation: "Purdue University Libraries and School of Information"
 abstract: >-
-  FIXME Replace this with a short abstract describing the
-  lesson, e.g. its target audience and main intended
-  learning objectives.
+  A theory-based module on managing geospatial research data during a project:
+  the research data lifecycle and data management plans, vector and raster
+  data models, geospatial file formats, coordinate reference systems,
+  designing data with data dictionaries, organizing, versioning and backing up
+  files, and assessing data quality.
+keywords:
+  - GIS
+  - data management
+  - data management plan
+  - file formats
+  - coordinate reference systems
+  - data dictionary
+  - data quality
+  - social science
+repository-code: "https://github.com/SpatialTurn/DataManagement"
+url: "https://spatialturn.github.io/DataManagement/"
 license: CC-BY-4.0
+date-released: "2025-08-09"
