@@ -68,6 +68,10 @@ preserves what your analysis needs:
 - **Conformal** projections (such as UTM or Lambert Conformal Conic) for local shapes and angles
 - **UTM zones** and **State Plane** zones for accurate local measurements
 
+Choosing a projection for a finished map, and seeing how projections distort the world, is covered in the
+Data Visualization module's [Fundamentals of Map Design](https://spatialturn.github.io/DataVisualization/mapbasics.html#projections)
+episode.
+
 ## EPSG codes
 
 Every common CRS has a numeric code in the **EPSG** registry (originally compiled by the European Petroleum
