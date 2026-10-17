@@ -1,87 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/01-introduction.html</loc>
+    <loc>https://SpatialTurn.github.io/DataManagement/01-introduction.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/404.html</loc>
+    <loc>https://SpatialTurn.github.io/DataManagement/404.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/CODE_OF_CONDUCT.html</loc>
+    <loc>https://SpatialTurn.github.io/DataManagement/CODE_OF_CONDUCT.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/LICENSE.html</loc>
+    <loc>https://SpatialTurn.github.io/DataManagement/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/aio.html</loc>
+    <loc>https://SpatialTurn.github.io/DataManagement/aio.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/citation.html</loc>
+    <loc>https://SpatialTurn.github.io/DataManagement/citation.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/data-management.html</loc>
+    <loc>https://SpatialTurn.github.io/DataManagement/crs.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/images.html</loc>
+    <loc>https://SpatialTurn.github.io/DataManagement/data-management.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/index.html</loc>
+    <loc>https://SpatialTurn.github.io/DataManagement/data-models.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/01-introduction.html</loc>
+    <loc>https://SpatialTurn.github.io/DataManagement/designing-data.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/404.html</loc>
+    <loc>https://SpatialTurn.github.io/DataManagement/file-formats.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/CODE_OF_CONDUCT.html</loc>
+    <loc>https://SpatialTurn.github.io/DataManagement/images.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/LICENSE.html</loc>
+    <loc>https://SpatialTurn.github.io/DataManagement/index.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/aio.html</loc>
+    <loc>https://SpatialTurn.github.io/DataManagement/instructor/01-introduction.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/citation.html</loc>
+    <loc>https://SpatialTurn.github.io/DataManagement/instructor/404.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/data-management.html</loc>
+    <loc>https://SpatialTurn.github.io/DataManagement/instructor/CODE_OF_CONDUCT.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/images.html</loc>
+    <loc>https://SpatialTurn.github.io/DataManagement/instructor/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/index.html</loc>
+    <loc>https://SpatialTurn.github.io/DataManagement/instructor/aio.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/instructor-notes.html</loc>
+    <loc>https://SpatialTurn.github.io/DataManagement/instructor/citation.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/introduction.html</loc>
+    <loc>https://SpatialTurn.github.io/DataManagement/instructor/crs.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/key-points.html</loc>
+    <loc>https://SpatialTurn.github.io/DataManagement/instructor/data-management.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/profiles.html</loc>
+    <loc>https://SpatialTurn.github.io/DataManagement/instructor/data-models.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/reference.html</loc>
+    <loc>https://SpatialTurn.github.io/DataManagement/instructor/designing-data.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor-notes.html</loc>
+    <loc>https://SpatialTurn.github.io/DataManagement/instructor/file-formats.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/introduction.html</loc>
+    <loc>https://SpatialTurn.github.io/DataManagement/instructor/images.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/key-points.html</loc>
+    <loc>https://SpatialTurn.github.io/DataManagement/instructor/index.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/profiles.html</loc>
+    <loc>https://SpatialTurn.github.io/DataManagement/instructor/instructor-notes.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/reference.html</loc>
+    <loc>https://SpatialTurn.github.io/DataManagement/instructor/introduction.html</loc>
+  </url>
+  <url>
+    <loc>https://SpatialTurn.github.io/DataManagement/instructor/key-points.html</loc>
+  </url>
+  <url>
+    <loc>https://SpatialTurn.github.io/DataManagement/instructor/organizing.html</loc>
+  </url>
+  <url>
+    <loc>https://SpatialTurn.github.io/DataManagement/instructor/profiles.html</loc>
+  </url>
+  <url>
+    <loc>https://SpatialTurn.github.io/DataManagement/instructor/quality.html</loc>
+  </url>
+  <url>
+    <loc>https://SpatialTurn.github.io/DataManagement/instructor/reference.html</loc>
+  </url>
+  <url>
+    <loc>https://SpatialTurn.github.io/DataManagement/instructor-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://SpatialTurn.github.io/DataManagement/introduction.html</loc>
+  </url>
+  <url>
+    <loc>https://SpatialTurn.github.io/DataManagement/key-points.html</loc>
+  </url>
+  <url>
+    <loc>https://SpatialTurn.github.io/DataManagement/organizing.html</loc>
+  </url>
+  <url>
+    <loc>https://SpatialTurn.github.io/DataManagement/profiles.html</loc>
+  </url>
+  <url>
+    <loc>https://SpatialTurn.github.io/DataManagement/quality.html</loc>
+  </url>
+  <url>
+    <loc>https://SpatialTurn.github.io/DataManagement/reference.html</loc>
   </url>
 </urlset>
